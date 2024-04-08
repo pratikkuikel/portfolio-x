@@ -2,7 +2,7 @@
     <details>
         <summary>Side-quests</summary>
         <ul class="p-2">
-            <li><a>Coggle thumbnail downloader</a></li>
+            <li><a href="{{ route('coggle-thumbnail-downloader') }}">Coggle thumbnail downloader</a></li>
         </ul>
     </details>
 </li>

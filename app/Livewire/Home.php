@@ -2,14 +2,21 @@
 
 namespace App\Livewire;
 
+use Illuminate\Support\Facades\URL;
 use Livewire\Component;
-use Livewire\Attributes\Title;
 
 class Home extends Component
 {
-    #[Title('Pratik kuikel')]
     public function render()
     {
-        return view('livewire.home');
+        $seo = [
+            'title' => 'Pratik kuikel',
+            'description' => "Dedicated Laravel enthusiast who thrives on crafting elegant and efficient web solutions. My journey in web development began four years ago, and since then, I've been on a continuous quest for knowledge and innovation",
+            'url' => URL::route('home'),
+            'image' => asset('profile.jpg'),
+        ];
+        return view('livewire.home')->layoutData([
+            'seo' => $seo
+        ]);
     }
 }
