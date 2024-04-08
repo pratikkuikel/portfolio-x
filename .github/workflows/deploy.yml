@@ -53,3 +53,15 @@ jobs:
             php artisan config:cache
             php artisan view:cache
             php artisan optimize
+
+      - name: Purge cache
+        uses: jakejarvis/cloudflare-purge-action@master
+        env:
+          CLOUDFLARE_ZONE: ${{ secrets.ZONE }}
+          CLOUDFLARE_TOKEN: ${{ secrets.CACHE_PURGE_TOKEN }}
+
+      - name: Publish Sitemap
+        env:
+          GOOGLE_SEARCH_CONSOLE_JSON_KEY: ${{ secrets.GOOGLE_SEARCH_CONSOLE_JSON_KEY }}
+        run: |
+          node ./publish_sitemap.js
