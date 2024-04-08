@@ -28,7 +28,7 @@ Let's walk through the steps I followed to automate the deployment of this portf
 <!-- Talk about ftp in this blog -->
 <!-- Google console search sitemap automation next blog -->
 
-## Check If Your site is Listed
+<!-- ## Check If Your site is Listed
 
 https://developers.google.com/webmaster-tools/v1/errors
 https://support.google.com/webmasters/thread/157027269?hl=en&sjid=1058018598832749067-AP
@@ -40,4 +40,4 @@ https://stackoverflow.com/questions/28080416/webmasters-api-user-does-not-have-s
 https://stackoverflow.com/questions/67306332/google-search-console-api-how-do-i-solve-user-does-not-have-sufficient-permiss
 https://console.cloud.google.com/apis/credentials/consent?project=survey-404408
 
-https://developers.google.com/webmaster-tools/v1/sites/list
+https://developers.google.com/webmaster-tools/v1/sites/list -->
