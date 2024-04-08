@@ -29,7 +29,7 @@
                 <p class="py-6">
                     Don't worry this tool will help you download the thumbnail of the coggle diagram.
                 </p>
-                <form wire:submit="download_thumbnail" method="POST">
+                <form wire:submit="download_thumbnail">
                     <input type="url" required wire:model="url" placeholder="Paste coggle diagram link here"
                         class="input input-bordered input-primary w-full max-w-xs" />
                     <button type="submit" class="btn btn-primary">
