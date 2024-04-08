@@ -1,4 +1,4 @@
-<x-layouts.app title="404">
+<x-layouts.error title="404">
     <div class="hero min-h-screen bg-base-200">
         <div class="hero-content text-center">
             <div class="max-w-md">
@@ -12,4 +12,4 @@
             </div>
         </div>
     </div>
-</x-layouts.app>
+</x-layouts.error>
