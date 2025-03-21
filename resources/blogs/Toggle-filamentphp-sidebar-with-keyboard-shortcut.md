@@ -4,7 +4,6 @@ description: "Toggle FilamentPHP Sidebar with Keyboard Shortcut."
 pubDate: "Mar 21 2025"
 heroImage: "sidebar.png"
 ---
-# Toggle FilamentPHP Sidebar with Keyboard Shortcut
 
 ## Introduction
 In this guide, we'll explore how to add a keyboard shortcut (ctrl + s) to toggle the sidebar in FilamentPHP. This can enhance user experience by providing quick access to the sidebar without having to click the toggle button manually. We'll walk through the steps required to set this up using a simple approach.
