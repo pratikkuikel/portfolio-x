@@ -2,7 +2,7 @@
 title: "Toggle FilamentPHP Sidebar with Keyboard Shortcut"
 description: "Toggle FilamentPHP Sidebar with Keyboard Shortcut."
 pubDate: "Mar 21 2025"
-heroImage: "sidebar.jpg"
+heroImage: "sidebar.png"
 ---
 # Toggle FilamentPHP Sidebar with Keyboard Shortcut
 
