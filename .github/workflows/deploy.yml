@@ -13,47 +13,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Build assets
-        run: |
-          npm install
-          npm run build
-
-      - name: 📂 Sync files
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-        with:
-          server: ${{ secrets.SERVER_IP }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSPHRASE }}
-          local-dir: ./
-          server-dir: ./
-          exclude: |
-            **/.git*
-            **/.git*/**
-            **/node_modules/**
-            **/storage/**
-            **/vendor/**
-
-      - name: Deploy Commands
-        uses: appleboy/ssh-action@v1.0.3
-        with:
-          host: ${{ secrets.SERVER_IP }}
-          username: ${{ secrets.SSH_USERNAME }}
-          passphrase: ${{ secrets.SSH_PASSPHRASE }}
-          key: ${{ secrets.SSH_KEY }}
-          port: ${{ secrets.SSH_PORT }}
-          script: |
-            cd ${{ secrets.PATH }}
-            touch database/database.sqlite
-            composer install --prefer-dist --no-dev -o --no-interaction
-            composer dump-autoload --optimize
-            php artisan migrate --force
-            php artisan app:generate-sitemap
-            php artisan cache:clear
-            php artisan route:cache
-            php artisan config:cache
-            php artisan view:cache
-            php artisan optimize
-
       - name: Purge cache
         uses: jakejarvis/cloudflare-purge-action@master
         env:
